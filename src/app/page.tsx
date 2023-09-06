@@ -9,6 +9,8 @@ export default function Home() {
 
 
   return (
-    <h1>Jogo da véia</h1>
+    <div className="h-screen w-screen flex flex-col items-center justify-center">
+      <h1>Jogo da velha</h1>
+    </div>
   )
 }
