@@ -6,15 +6,21 @@ interface BoxProps {
   id: number,
   valor: string,
   jogadorDaVez: string,
+  valoresQuadrados: string[],
+  setValoresQuadrados: any,
 }
 
-export function Box ({valor, id, jogadorDaVez}:BoxProps) {
+export function Box ({valor, id, jogadorDaVez, valoresQuadrados, setValoresQuadrados}:BoxProps) {
 
   const [valorState, setValorState] = useState(valor)
 
   function click () {
     setValorState(jogadorDaVez)
-  }
+
+    const novosValoresQuadrados = [...valoresQuadrados]
+    novosValoresQuadrados[id] = jogadorDaVez
+    setValoresQuadrados(novosValoresQuadrados)
+}
 
 
   return (
