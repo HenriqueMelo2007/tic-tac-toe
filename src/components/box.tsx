@@ -8,11 +8,20 @@ interface BoxProps {
   jogadorDaVez: string,
   valoresQuadrados: string[],
   setValoresQuadrados: any,
+  setJogadorDaVez: any
 }
 
-export function Box ({valor, id, jogadorDaVez, valoresQuadrados, setValoresQuadrados}:BoxProps) {
+export function Box ({valor, id, jogadorDaVez, setJogadorDaVez, valoresQuadrados, setValoresQuadrados}:BoxProps) {
 
   const [valorState, setValorState] = useState(valor)
+
+  function mudarJogadorDaVez() {
+    let novoJogador: string
+
+    if (jogadorDaVez == 'X') {
+      return novoJogador = 'O'
+    } else { return novoJogador = 'X' }
+  }
 
   function click () {
     setValorState(jogadorDaVez)
@@ -20,6 +29,9 @@ export function Box ({valor, id, jogadorDaVez, valoresQuadrados, setValoresQuadr
     const novosValoresQuadrados = [...valoresQuadrados]
     novosValoresQuadrados[id] = jogadorDaVez
     setValoresQuadrados(novosValoresQuadrados)
+    
+    const novoJogador = mudarJogadorDaVez()
+    setJogadorDaVez(novoJogador)
 }
 
 

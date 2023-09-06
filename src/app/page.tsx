@@ -14,7 +14,7 @@ export default function Home() {
       <h1 className="text-5xl">Jogo da velha</h1>
 
       <div className="w-full grid grid-cols-colunaResponsiva px-padding-customizado justify-center mt-10">
-        {valoresQuadrados.map( (item, index) => <Box key={index} id={index} valor={item} jogadorDaVez={jogadorDaVez} valoresQuadrados={valoresQuadrados} setValoresQuadrados={setValoresQuadrados}></Box>)}
+        {valoresQuadrados.map( (item, index) => <Box key={index} id={index} valor={item} jogadorDaVez={jogadorDaVez} setJogadorDaVez={setJogadorDaVez} valoresQuadrados={valoresQuadrados} setValoresQuadrados={setValoresQuadrados}></Box>)}
       </div>
 
     </div>
