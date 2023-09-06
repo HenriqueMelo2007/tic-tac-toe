@@ -13,6 +13,14 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+
+      gridTemplateColumns: {
+        'colunaResponsiva': 'repeat(auto-fit, minmax(144px, 144px))',
+      },
+
+      padding: {
+        'padding-customizado': '550px'
+      }
     },
   },
   plugins: [],
