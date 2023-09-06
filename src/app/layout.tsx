@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Caveat } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const caveat = Caveat({ subsets: ['latin'], weight: '700' })
 
 export const metadata: Metadata = {
   title: 'Tic-Tac-Toe',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br" className='p-0 m-0 box-border'>
-      <body className={inter.className}>{children}</body>
+      <body className={caveat.className}>{children}</body>
     </html>
   )
 }
