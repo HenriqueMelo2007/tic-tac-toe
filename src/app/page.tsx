@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-center">
-      <h1>Jogo da velha</h1>
+      <h1 className="text-5xl">Jogo da velha</h1>
     </div>
   )
 }
