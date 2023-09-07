@@ -5,8 +5,9 @@ import { useState } from "react"
 
 export default function Home() {
 
-  const [jogadorDaVez, setJogadorDaVez] = useState('X') // 'X' ou 'O'
-  const [valoresQuadrados, setValoresQuadrados] = useState(['', '', '', '', '', '', '', '', '']) // 'X' ou 'O'
+  const [jogadorDaVez, setJogadorDaVez] = useState('X')
+  const [valoresQuadrados, setValoresQuadrados] = useState(['', '', '', '', '', '', '', '', ''])
+  const [posicoesVencedoras, setPosicoesVencedoras] = useState([[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]])
 
 
   return (
