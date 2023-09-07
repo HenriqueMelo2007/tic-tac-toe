@@ -8,10 +8,11 @@ interface BoxProps {
   jogadorDaVez: string,
   valoresQuadrados: string[],
   setValoresQuadrados: any,
-  setJogadorDaVez: any
+  setJogadorDaVez: any,
+  posicoesVencedoras: number[][]
 }
 
-export function Box ({valor, id, jogadorDaVez, setJogadorDaVez, valoresQuadrados, setValoresQuadrados}:BoxProps) {
+export function Box ({valor, id, jogadorDaVez, setJogadorDaVez, valoresQuadrados, setValoresQuadrados, posicoesVencedoras}:BoxProps) {
 
   const [valorState, setValorState] = useState(valor)
 
@@ -36,9 +37,6 @@ export function Box ({valor, id, jogadorDaVez, setJogadorDaVez, valoresQuadrados
     const novoJogador = mudarJogadorDaVez()
     setJogadorDaVez(novoJogador)
 }
-
-useEffect(() => {}, [valoresQuadrados])
-
 
   return (
     <div onClick={click} className="border border-black text-black w-36 h-36 flex justify-center items-center hover:cursor-pointer text-5xl">{valorState}</div>
