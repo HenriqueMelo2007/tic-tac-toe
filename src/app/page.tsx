@@ -14,7 +14,7 @@ export default function Home() {
     posicoesVencedoras.forEach( (item) => {
   
       if ( valoresQuadrados[item[0]] !== '' && valoresQuadrados[item[0]] === valoresQuadrados[item[1]] && valoresQuadrados[item[1]] === valoresQuadrados[item[2]] ) {
-        return setTimeout(() => [alert(`O JOGADOR '${jogadorDaVez == 'X' ? 'O' :  'X'}' VENCEU`)], 100)  
+        return setTimeout(() => [alert(`O JOGADOR '${jogadorDaVez == 'X' ? 'O' :  'X'}' VENCEU`), location.reload()], 100)  
       }
   
     })
