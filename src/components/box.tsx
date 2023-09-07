@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 interface BoxProps {
   id: number,
@@ -23,10 +23,10 @@ export function Box ({valor, id, jogadorDaVez, setJogadorDaVez, valoresQuadrados
     } else { return novoJogador = 'X' }
   }
 
+
   function click () {
-
     if (valor !== '') { return }
-
+    
     setValorState(jogadorDaVez)
 
     const novosValoresQuadrados = [...valoresQuadrados]
@@ -35,9 +35,9 @@ export function Box ({valor, id, jogadorDaVez, setJogadorDaVez, valoresQuadrados
     
     const novoJogador = mudarJogadorDaVez()
     setJogadorDaVez(novoJogador)
-
-    console.log(valoresQuadrados)
 }
+
+useEffect(() => {}, [valoresQuadrados])
 
 
   return (
